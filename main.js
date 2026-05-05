@@ -25,7 +25,7 @@ const App = {
     },
 
     config: {
-        AWS_videoURL_Base: "https://agsdentistry.s3.us-east-1.amazonaws.com/assets/videos/interaction/",
+        AWS_videoURL_Base: "https://agshackastone.s3.us-east-1.amazonaws.com/assets/videos/interaction/",
         ENDPOINT_URL: "https://verg-api-zone.cise.ufl.edu/",
         intentMinId: 1,
         intentMaxId: 431,
