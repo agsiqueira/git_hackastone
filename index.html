@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Juan Gomez Simulation</title>
+
+  <script type="module" src="./main.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" type="text/css" href="./css/boilerplate/bootstrap.css" />
+  <link href="//fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet" type="text/css" />
+  <link href="./css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <video
+    id="myVideo"
+    style="display:none"
+    autoplay
+    playsinline
+    webkit-playsinline
+    preload="metadata"
+    poster="https://agsdentistry.s3.us-east-1.amazonaws.com/assets/images/poster.png"
+  ></video>
+
+  <audio id="myAudio" style="display:none;">
+    Your browser does not support the audio element.
+  </audio>
+
+  <video
+    id="idleVideo"
+    style="display:none"
+    autoplay
+    muted
+    playsinline
+    webkit-playsinline
+    preload="metadata"
+    poster="https://agsdentistry.s3.us-east-1.amazonaws.com/assets/images/poster.png"
+  >
+    <source
+      src="https://agsdentistry.s3.us-east-1.amazonaws.com/assets/videos/interaction/idle.mp4"
+      type="video/mp4"
+    />
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div style="height:auto; width:100%">
+    <div id="infoContainer">
+
+  <div id="left-panel">
+    <div id="prog">
+      <h1 class="title-wrapper">Patient Information</h1>
+      <div class="messageList">
+        <div class="alert alert-info">
+          <p>
+            <strong>Patient:</strong> Juan Gomez, a 50-year-old Hispanic male, presents to the outpatient urgent care clinic setting in the late evening. He was in a fight while drinking with some friends at a local bar and was punched in the face two hours ago. A friend brings him to the clinic. His right front tooth was knocked out. He brings the tooth in a cup of water to the clinic. Mr. Gomez is bloody, smells of alcohol, and is anxious.
+          </p>
+          <p>
+            <strong>Goals:</strong> Your assignment is to interview an emergency patient you are seeing today. Please proceed to gather some information about the patient's history and background to determine the patient's chief complaint. Be sure to show concern for his difficulties.
+          </p>
+          <p>
+            <strong>Educational focus:</strong> The purpose is to develop critical thinking skills in patient communication and triage for management of dental pain, including communication about appropriate medication use.
+          </p>
+          <p>
+            <strong>Scope:</strong> This patient has talked to hundreds of medical students and has over 300 responses to almost 1300 questions. This patient can talk about topics in the areas of: Chief complaint, History of present illness, Medical history, family history, and Social history.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="discoveries">
+      <h1 class="title-wrapper">Discoveries (0/15)</h1>
+
+      <div id="dList" class="discoveryList">
+        <button class="disc_category">
+          <div id="scene1">Patient Rapport (0/3)</div>
+        </button>
+        <div class="content">
+          <div id="scene1_discs"></div>
+        </div>
+
+        <p></p>
+
+        <button class="disc_category">
+          <div id="scene2">Painful (0/4)</div>
+        </button>
+        <div class="content">
+          <div id="scene2_discs"></div>
+        </div>
+
+        <p></p>
+
+        <button class="disc_category">
+          <div id="scene3">Empathic Opportunity (0/5)</div>
+        </button>
+        <div class="content">
+          <div id="scene3_discs"></div>
+        </div>
+
+        <p></p>
+
+        <button class="disc_category">
+          <div id="scene4">Opioids (0/3)</div>
+        </button>
+        <div class="content">
+          <div id="scene4_discs"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    id="potentialquestions"
+    style="display:none; width:300px; margin-left:auto; margin-right:335px; padding-top:16%"
+  >
+    <h class="title-wrapper">Do you mean to ask?</h>
+    <div class="messageList">
+      <div style="width:100%">
+        <ul id="questionList"></ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <div id="sceneConclusion" class="popup-overlay" style="display:none;">
+    <div class="popup-window">
+      <button id="popup-close" class="close-button">&times;</button>
+      <h2 id="concludedScene">Parabéns, cena # concluída</h2>
+    </div>
+  </div>
+
+  <div id="focusPopup" class="popup-overlay" style="display:none;">
+    <div class="popup-window">
+      <button id="popup-close2" class="close-button">&times;</button>
+      <h3 style="margin:15px;">Humm… Você fez algumas perguntas que não se alinham com esta cena.</h3>
+      <strong>Nesta cena, os objetivos são:</strong>
+      <div id="sceneObjectives"></div>
+      <p>Tente fazer perguntas que se alinham com os objetivos da cena. Assim, você poderá prosseguir para as próximas cenas.</p>
+    </div>
+  </div>
+
+  <div id="gptAnswer" class="popup-overlay" style="display:none;">
+    <div class="popup-window">
+      <button id="popup-close3" class="close-button">&times;</button>
+      <h3 style="margin:15px;">
+        Humm… I don't think I can answer this question. It might be out of scope.
+        But, here is a tentative response:
+      </h3>
+
+      <div class="chat-list">
+        <div id="question" class="df-message-bubble user"></div>
+        <div id="reply" class="df-message-bubble bot"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="teethPopup" class="popup-overlay" style="display:none;">
+    <div class="popup-window" style="max-width:800px; text-align:center;">
+      <button class="close-button">&times;</button>
+      <h2>Oral Examination</h2>
+      <img
+        src="./assets/images/teeth.png"
+        alt="Patient teeth"
+        style="width:100%; max-width:700px; border-radius:8px;"
+      />
+    </div>
+  </div>
+
+
+  <div id="notesPopup" class="popup-overlay" style="display:none;">
+    <div class="popup-window notes-popup-window">
+      <button id="notesPopupClose" class="close-button">&times;</button>
+      <h2>Session Notes</h2>
+      <p class="notes-helper-text">Type any observations here. Your notes will stay available when you reopen this window and will be included in the generated report.</p>
+      <textarea
+        id="notesTextarea"
+        class="notes-textarea"
+        placeholder="Type your notes here..."
+        aria-label="Session notes"
+      ></textarea>
+    </div>
+  </div>
+
+  <div class="chat-container">
+    <h1 class="title-wrapper chat-title">
+      <span>Juan Gomez</span>
+      <span id="interactionTimer">00:00</span>
+    </h1>
+
+    <div id="chat-box"></div>
+
+    <div class="chat-input">
+      <input type="text" id="chatInput" placeholder="Ask something" />
+      <button id="mic-button" title="Click to talk">🎤</button>
+      <button id="send-button">➤</button>
+    </div>
+  </div>
+
+  <div id="floating-ui">
+    <div class="control-panel">
+<div class="top-buttons">
+  <button id="inspectTeethBtn" class="rounded-btn">Inspect Teeth</button>
+  <button id="notesBtn" class="rounded-btn note-trigger" title="Take notes">📝 Notes</button>
+  <button id="downloadReportBtn" class="rounded-btn" title="Download Report">📄 Report</button>
+</div>
+
+      <div class="bottom-button">
+        <button class="rounded-btn" onclick="App.redirectPage()">
+          End Conversation
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

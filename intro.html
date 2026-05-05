@@ -1,0 +1,225 @@
+﻿<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="./css/boilerplate/bootstrap.css">
+  <link href='//fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+  <link href='./css/font-awesome/css/font-awesome.min.css' rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="./css/introOutro.css">
+  <script type="text/javascript" src="intro.js" defer></script>
+</head>
+
+<body>
+  <audio id="beepAudio">
+    <source src="beep.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <div class="modal" style="width:98%; height:98%;">
+    <div class="modal-header">
+      <!-- <h3>Bem-vindo(a)!</h3> -->
+    </div>
+    <div class="modal-body">
+      <div id="back_intro1" class="alert alert-info" style="display: flex; align-items: center; justify-content: space-between;">
+        <!-- Video on the left -->
+        <video id="myVideo1" width="45%" height="auto" controls muted>
+          <source src="/assets/videos/intro-01.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <!-- Text content on the right, with a narrower width -->
+        <div style="width: 45%; padding-left: 20px;">
+          <b class="custom-font">
+            Caro clínico, seja muito bem-vindo ao projeto de pesquisa sobre pacientes virtuais!
+            <!-- <br /><br /> -->
+            Agradecemos sua participação, pois nos ajudará no desenvolvimento de um paciente virtual treinado por Inteligência Artificial e para a avaliação de seu potencial como ferramenta de apoio ao seu trabalho como profissional de saúde no contexto hospitalar.
+            <!-- <br /><br /> -->
+            Durante todo este estudo, um pesquisador estará disponível no Zoom caso tiver alguma dúvida.
+            <!-- <br /> -->
+            E para continuar, por favor clique na seta azul abaixo para seguir para a próxima página.
+          </b>
+        </div>
+      </div>
+
+      <!-- Adjusted text block for back_intro2 with video on the left and narrower text block -->
+      <div id="back_intro2" class="alert alert-info" style="display: none; align-items: center; justify-content: space-between;">
+        <!-- Video on the left -->
+        <video id="myVideo2" width="45%" height="auto" controls autoplay>
+          <source src="/assets/videos/intro-02.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <!-- Text content on the right, narrower width -->
+        <div style="width: 45%; padding-left: 20px;">
+          <b class="custom-font">
+            <!-- <br /> -->
+            Durante a pesquisa, solicitamos que você realize uma interação com um paciente virtual. Trata-se de um personagem fictício, com comportamento semelhante ao de uma pessoa real porém controlado por uma inteligência artificial. O objetivo é que você conduza essa conversa como faria em uma primeira consulta clínica, realizando uma entrevista inicial para identificar o principal problema apresentado, e avaliar o nível de risco do paciente.
+            <!-- <br /><br /> -->
+            Ao final da interação, pediremos que responda a um questionário com duração aproximada de 15 minutos, no qual será solicitado seu feedback sobre a experiencia com o paciente. Após isso, também desponibilizaremos um retorno descritivo (um resumo) sobre sua atuação, com ênfase no processo de entrevista e na abordagem adotada.
+            <!-- <br /><br /> -->
+          </b>
+        </div>
+      </div>
+
+      <!-- Adjusted text block for back_intro3 with video on the left and narrower text block -->
+      <div id="back_intro3" class="alert alert-info" style="display: none; align-items: center; justify-content: space-between;">
+        <!-- Video on the left -->
+        <video id="myVideo3" width="45%" height="auto" controls autoplay>
+          <source src="/assets/videos/intro-03.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <!-- Text content on the right, narrower width -->
+        <div style="width: 45%; padding-left: 20px;">
+          <b class="custom-font">
+            Na página de interação, você verá o seu paciente virtual. No canto superior esquerdo da tela, serão fornecidas informações básicas sobre ele e, à direita, verá uma janela de diálogo denominada "Histórico do Chat", onde poderá digitar suas perguntas.
+            <!-- <br /><br /> -->
+            Vale destacar que, embora o paciente virtual se comunique por voz, ele não reconhece a linguagem falada. Por isso, é necessário digitar suas perguntas na caixa de diálogo, e a cada interação escrita, o paciente responderá oralmente.
+            <!-- <br /><br /> -->
+            No canto inferior direito da tela, verá um botão de "Finalizar Entrevista". Por favor, clique neste botão quando terminar a conversa.
+          </b>
+        </div>
+      </div>
+
+
+      <div id="back_intro4" class="alert alert-info" style="display: none; align-items: center; justify-content: space-between;">      
+        <!-- Video on the left -->
+        <video id="myVideo4" width="45%" height="auto" controls autoplay>
+          <source src="/assets/videos/intro-04.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <!-- Text content on the right, narrower width -->
+        <div style="width: 45%; padding-left: 20px; padding-right: 20px;">
+          <b class="custom-font">
+            <ul>
+              Aqui está algumas dicas para facilitar a sua entrevista:
+              <li>Lembre-se de que é um <b>paciente virtual</b> e às vezes, ele pode não entender a sua pergunta. Quando isso acontecer, 
+                o sistema provavelmente sugerirá formas alternativas de formular a pergunta, para que ele consiga compreendê-la. Essas 
+                perguntas alternativas aparecerão ao lado da janela de diálogo. E você pode escolher qualquer pergunta alternativa que 
+                achar adequada.</li>
+              <li>O paciente virtual apresenta dificuldade em compreender afirmações que combinam uma declaração empática com uma pergunta, ou 
+                que contem múltiplas perguntas ao mesmo tempo. Por isso, recomenda-se separar essas frases, e por exemplo, em vez de dizer: 
+                "Sinto muito em ouvir isso, você poderia me falar mais sobre o seu humor?", deve-se dizer apenas: "Sinto muito em ouvir isso". 
+                Após o paciente virtual responder, você pode fazer a pergunta: "Por favor, fale mais sobre seu humor". Essa apordagem facilita
+                a compreensão e a resposta do paciente virtual.</li>
+              <li>O paciente virtual necessita de perguntas específicas para compreender e responder adequadamente. Perguntas genéricas como 
+                "Por que isso?" ou "Por quê?", não são eficazes. Por tanto, recomenda-se fornecer mais informações no questionamento, por exemplo, 
+                em vez de perguntas vagas, deve-se perguntar: "Por que você está chateado?" ou "Por que você odeia tal coisa?". Essa clareza facilita a
+                interação com o paciente virtual.</li>
+              <li>Se o paciente virtual fornecer alguma resposta que não fizer sentido para você, por favor, ignore-a e continue sua 
+                entrevista. Isso pode ocorrer algumas vezes, e ajudará a aprimorar o algoritmo de Inteligência Artificial que o controla.</li>
+            </ul>
+          </b>
+        </div>
+      </div>
+
+      <div id="back_intro5" class="alert alert-info" style="display: none; align-items: center; justify-content: space-between;">
+        <!-- Video on the left -->
+        <video id="myVideo5" width="45%" height="auto" controls autoplay>
+          <source src="/assets/videos/intro-05.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <!-- Text content on the right, narrower width -->
+        <div style="width: 45%; padding-left: 20px;">
+          <div id="text-container-5">
+            <b class="custom-font">
+              Antes de iniciarmos, gostaríamos de pedir para que leia e assine o termo de consentimento para voluntariado, disponível no botão abaixo. Este documento contém informações importantes sobre o projeto cujo está interessado em participar.
+            </b>
+          </div>
+          <br/><br/>
+          <div id="button-container-5" style="display: none;">
+            <a href="https://msbiresearch.iad1.qualtrics.com/jfe/form/SV_bJZZfUAb7zcjqcugggg" target="_blank">
+              <button class="rounded-btn" type="button">Ler o termo de consentimento</button>
+            </a>
+          </div>
+        </div>
+      </div>
+            
+      <div id="back_intro6" class="alert alert-info" style="display:none; align-items: center; justify-content: space-between;">
+        <!-- Video on the left -->
+        <video id="myVideo6" width="45%" height="auto" controls autoplay>
+          <source src="/assets/videos/intro-06.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <!-- Text content on the right, narrower width -->
+        <div style="width: 45%; padding-left: 20px;">
+          <div id="text-container-6">
+            <b class="custom-font">
+              Você tem alguma pergunta? <br>
+              Caso não tenha, sua entrevista começará assim que clicar no botão abaixo. Ao começar, você ouvirá um som indicando que o paciente virtual está pronto para conversar com você!
+            </b>
+          </div>
+          <br><br>
+          <div id="button-container-6" style="display: none;">
+              <button id="start-interact" class="rounded-btn" type="button" onclick="startInteract()">Começar Interação</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Intro 1 navigation -->
+      <div class="nav-row first">
+        <button id="tointro2" class="circle-btn blue" type="button" onclick="goToIntroN(2)">
+          <i class="fa fa-chevron-right white-font"></i>
+        </button>
+      </div>
+
+      <!-- Intro 2 navigation -->
+      <div class="nav-row">
+        <button id="backtointro1" class="circle-btn blue" style="display:none" type="button" onclick="goBackIntroN(1)">
+          <i class="fa fa-chevron-left white-font"></i>
+        </button>
+        <button id="tointro3" class="circle-btn blue" style="display:none" type="button" onclick="goToIntroN(3)">
+          <i class="fa fa-chevron-right white-font"></i>
+        </button>
+      </div>
+
+      <!-- Intro 3 navigation -->
+      <div class="nav-row">
+        <button id="backtointro2" class="circle-btn blue" style="display:none" type="button" onclick="goBackIntroN(2)">
+          <i class="fa fa-chevron-left white-font"></i>
+        </button>
+        <button id="tointro4" class="circle-btn blue" style="display:none" type="button" onclick="goToIntroN(4)">
+          <i class="fa fa-chevron-right white-font"></i>
+        </button>
+      </div>
+
+      <!-- Intro 4 navigation -->
+      <div class="nav-row">
+        <button id="backtointro3" class="circle-btn blue" style="display:none" type="button" onclick="goBackIntroN(3)">
+          <i class="fa fa-chevron-left white-font"></i>
+        </button>
+        <button id="tointro5" class="circle-btn blue" style="display:none" type="button" onclick="goToIntroN(5)">
+          <i class="fa fa-chevron-right white-font"></i>
+        </button>
+      </div>
+
+      <!-- Intro 5 navigation -->
+      <div class="nav-row">
+        <button id="backtointro4" class="circle-btn blue" style="display:none" type="button" onclick="goBackIntroN(4)">
+          <i class="fa fa-chevron-left white-font"></i>
+        </button>
+        <button id="tointro6" class="circle-btn blue" style="display:none" type="button" onclick="goToIntroN(6)">
+          <i class="fa fa-chevron-right white-font"></i>
+        </button>
+      </div>
+
+      <!-- Intro 6 navigation -->
+      <div class="nav-row">
+        <button id="backtointro5" class="circle-btn blue" style="display:none" type="button" onclick="goBackIntroN(5)">
+          <i class="fa fa-chevron-left white-font"></i>
+        </button>
+      </div>
+
+
+      <button style="margin-left:90%; display:none" id="bernie-okay" class="btn btn-primary" type="button" onclick="startEvent()">
+        Start the Interaction
+      </button>
+    </div>
+
+    <div id="interface" style="align-content:center; display:none; height:auto">
+      <img src="/assets/images/intro-example.png" alt="Interface" style="width:50%; margin-left:25%; height:auto; margin-bottom: 5%;">
+    </div>
+  </div>
+</body>
+</html>

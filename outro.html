@@ -1,0 +1,57 @@
+﻿<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="./css/boilerplate/bootstrap.css">
+  <link href='//fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+  <link href='./css/font-awesome/css/font-awesome.min.css' rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="./css/introOutro.css">
+</head>
+<body>
+  <div class="modal" style="width:98%; height:98%;">
+    <div class="modal-header">
+        <!-- <h3>Thank you</h3> -->
+    </div>
+    <div class="modal-body">
+      <div id="jack-finish" class="alert alert-info" style="display: flex; align-items: center; justify-content: space-between;">
+        <!-- Video on the left -->
+        <video id="myVideo7" width="45%" height="auto" style="display: none;" controls>
+          <source src="/assets/videos/outro-01.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <!-- Text content on the right, narrower width -->
+        <div style="width: 40%; padding-left: 20px; padding-right: 10px;">
+          <b class="custom-font">
+            Muito obrigada por completar a nossa pesquisa!
+            <br/><br/>
+            Um registro da sua interação com a Maria de Fátima Rezende foi gerado e salvo na sua pasta de Downloads.
+            Procure por um arquivo cujo nome começa com: Noah_DF_GPT_log.
+            <br/><br/>
+            A próxima etapa do estudo envolverá medidas de pesquisa e não será registrado.
+            <br/><br/>
+            Por favor, clique no botão abaixo para acessar a pesquisa.
+          </b>
+          <br/><br/><br/>
+          <a href="https://msbiresearch.iad1.qualtrics.com/jfe/form/SV_1HVPexDI6TiSelosssss" target="_blank">
+            <button class="rounded-btn" type="button">Pesquisa Pós-Interação</button>
+          </a>
+        </div>
+      </div>
+      <div class="nav-row">
+        <button id="backtointeraction" class="circle-btn blue" type="button" onclick="goBackInteraction()">
+          <i class="fa fa-chevron-left white-font"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <script>
+    function goBackInteraction() {
+        window.parent.document.getElementById('outro').style.display = "none";
+
+        const video7 = document.getElementById('myVideo7');
+        video7.pause();
+        video7.currentTime = 0;
+    }
+  </script>
+</body>
+</html>

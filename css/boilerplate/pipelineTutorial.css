@@ -1,0 +1,200 @@
+﻿body {
+  overflow: hidden;
+}
+.navbar-fixed-top {
+  position: relative;
+}
+#left {
+  width: 20%;
+  height: 100%;
+  left: 0%;
+  position: absolute;
+  z-index: 1;
+  background-color: #ededed;
+  box-shadow: inset 0px -1px 20px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0px -1px 20px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0px -1px 20px rgba(0, 0, 0, 0.5);
+  -o-box-shadow: inset 0px -1px 20px rgba(0, 0, 0, 0.5);
+  -ms-box-shadow: inset 0px -1px 20px rgba(0, 0, 0, 0.5);
+}
+#info {
+  position: fixed;
+  margin-left: 20px;
+  width: 17%;
+  text-align: justify;
+}
+/* Chat Region */
+
+#chat {
+  width: 55.9%;
+  left: 20%;
+  position: absolute;
+  bottom: 0px;
+  top: 44px;
+}
+#chat input {
+  width: 100%;
+  height: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+}
+#chatinput {
+  height: 10%;
+  position: absolute;
+  width: 90%;
+  top: 60%;
+  right: 5%;
+  font-size: medium;
+}
+#continueButton {
+  height: 10%;
+  position: absolute;
+  width: 60%;
+  top: 73%;
+  right: 20%;
+  text-align : center;
+  text-decoration-color: red;
+  color: red;
+  font-size: medium;
+}
+#warning {
+  height: 10%;
+  position: absolute;
+  top: 83%;
+  right: 40%;
+}
+#chatlog {
+  overflow: auto;
+  margin-bottom: 1%;
+  height: 65%;
+  top: 14%;
+  position: absolute;
+  width: 80%;
+  left: 25%;
+  text-align: justify;
+  font-family: 'Microsoft Sans Serif';
+  font-size: large;
+}
+#VHSpeech {
+  height: 15%;
+  top: 42%;
+  position: absolute;
+  width: 70%;
+  left: 25%;
+  background-color: ivory;
+  font-size: medium;
+}
+#instructorImage {
+  top: 10%;
+  position: absolute;
+  width: 20%;
+  height:10%;
+  left: 3%;
+  text-align: center;
+}
+#virtualCharacter {
+  background-color: white;
+  color: #222222;
+  padding: 3px 5px 3px 5px;
+  border: 1px solid #cccccc;
+  position: relative;
+  margin-bottom: -1px;
+  min-height: 70px;
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+#left_arrow {
+  position: absolute;
+  left: -9px;
+  top: 10px;
+}
+#right_arrow {
+  position: absolute;
+  right: -9px;
+  top: 10px;
+}
+#virtual_pic {
+  position: absolute;
+  width: 77px;
+  height: 77px;
+  top: 0px;
+  text-align: center;
+  background-size: 77px 77px;
+  left: -77px;
+}
+#human_pic {
+  position: absolute;
+  width: 100px;
+  height: 122px;
+  top: 0px;
+  text-align: center;
+  background-size: 77px 77px;
+  right: -100px;
+}
+#humanCharacter {
+  background-color: white;
+  color: #222222;
+  padding: 3px 5px 3px 5px;
+  border: 1px solid #cccccc;
+  position: relative;
+  margin-bottom: -1px;
+  min-height: 70px;
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+}
+/* Sidebar Pane */
+
+#sidebar {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 300px;
+  height: 100%;
+  margin: -9px 0 0 675px;
+  padding: 0px;
+}
+#entry {
+  margin-left: 20px;
+}
+#disc {
+  margin-left: 20px;
+}
+#discoveries {
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  left: 80%;
+  background-color: #ededed;
+  box-shadow: inset 0px -1px 20px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0px -1px 20px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0px -1px 20px rgba(0, 0, 0, 0.5);
+  -o-box-shadow: inset 0px -1px 20px rgba(0, 0, 0, 0.5);
+  -ms-box-shadow: inset 0px -1px 20px rgba(0, 0, 0, 0.5);
+}
+/* Webkit Scrollbar (for now) */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(0, 0, 0, 0.4);
+}
+

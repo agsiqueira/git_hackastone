@@ -1,0 +1,15 @@
+﻿leaf {
+    color:green;
+}
+
+
+.leaf:hover
+{
+    color:red;
+    cursor:pointer;
+}
+.leaf:active
+{
+    color:#005;
+    
+}

@@ -1,0 +1,138 @@
+{
+  "config": {
+    "totalDiscoveriesTarget": 15
+  },
+  "sceneConfig": {
+    "1": { "headerId": "scene1", "listId": "scene1_discs", "total": 3, "category": "Patient Rapport" },
+    "2": { "headerId": "scene2", "listId": "scene2_discs", "total": 4, "category": "Painful" },
+    "3": { "headerId": "scene3", "listId": "scene3_discs", "total": 5, "category": "Empathic Opportunity" },
+    "4": { "headerId": "scene4", "listId": "scene4_discs", "total": 3, "category": "Opioids" }
+  },
+  "discoveryDefinitions": {
+    "rapport_name": {
+      "category": "Patient Rapport",
+      "scene": 1,
+      "desc": "Asked the patient's name"
+    },
+    "rapport_age": {
+      "category": "Patient Rapport",
+      "scene": 1,
+      "desc": "Asked the patient's age"
+    },
+    "rapport_greeting": {
+      "category": "Patient Rapport",
+      "scene": 1,
+      "desc": "Opened the encounter and established rapport"
+    },
+
+    "pain_chief_complaint": {
+      "category": "Painful",
+      "scene": 2,
+      "desc": "Identified the chief complaint and pain"
+    },
+    "pain_onset_trauma": {
+      "category": "Painful",
+      "scene": 2,
+      "desc": "Identified onset and trauma mechanism"
+    },
+    "pain_quality": {
+      "category": "Painful",
+      "scene": 2,
+      "desc": "Identified the quality of pain"
+    },
+    "pain_severity": {
+      "category": "Painful",
+      "scene": 2,
+      "desc": "Assessed pain severity"
+    },
+    "pain_tooth_exam": {
+      "category": "Painful",
+      "scene": 2,
+      "desc": "Inspected the avulsed tooth injury"
+    },
+
+    "empathy_fear_needles": {
+      "category": "Empathic Opportunity",
+      "scene": 3,
+      "desc": "Discovered fear of needles"
+    },
+    "empathy_fear_doctors": {
+      "category": "Empathic Opportunity",
+      "scene": 3,
+      "desc": "Discovered fear of doctors"
+    },
+    "empathy_feels_heard": {
+      "category": "Empathic Opportunity",
+      "scene": 3,
+      "desc": "Patient responded positively to being listened to"
+    },
+    "empathy_financial_stress": {
+      "category": "Empathic Opportunity",
+      "scene": 3,
+      "desc": "Discovered financial stress"
+    },
+    "empathy_bleeding_distress": {
+      "category": "Empathic Opportunity",
+      "scene": 3,
+      "desc": "Discovered oral bleeding and distress"
+    },
+
+    "opioid_prior_selfmedication": {
+      "category": "Opioids",
+      "scene": 4,
+      "desc": "Identified prior self-medication"
+    },
+    "opioid_otc_not_working": {
+      "category": "Opioids",
+      "scene": 4,
+      "desc": "Identified that over-the-counter medication is not working"
+    },
+    "opioid_requests_percocet": {
+      "category": "Opioids",
+      "scene": 4,
+      "desc": "Patient explicitly requested Percocet"
+    }
+  },
+  "answerIndexToDiscovery": {
+    "1": "rapport_name",
+    "3": "rapport_age",
+    "26": "rapport_greeting",
+
+    "15": "pain_chief_complaint",
+    "17": "pain_chief_complaint",
+    "40": "pain_chief_complaint",
+    "18": "pain_onset_trauma",
+    "410": "pain_onset_trauma",
+    "19": "pain_quality",
+    "22": "pain_quality",
+    "54": "pain_severity",
+
+    "53": "empathy_fear_needles",
+    "130": "empathy_fear_needles",
+    "195": "empathy_fear_needles",
+    "76": "empathy_fear_doctors",
+    "82": "empathy_fear_doctors",
+    "179": "empathy_fear_doctors",
+    "114": "empathy_feels_heard",
+    "117": "empathy_financial_stress",
+    "144": "empathy_bleeding_distress",
+
+    "24": "opioid_prior_selfmedication",
+    "48": "opioid_prior_selfmedication",
+    "51": "opioid_prior_selfmedication",
+    "86": "opioid_prior_selfmedication",
+    "207": "opioid_prior_selfmedication",
+    "316": "opioid_prior_selfmedication",
+    "374": "opioid_prior_selfmedication",
+
+    "103": "opioid_otc_not_working",
+    "201": "opioid_otc_not_working",
+    "248": "opioid_otc_not_working",
+    "272": "opioid_otc_not_working",
+    "323": "opioid_otc_not_working",
+    "428": "opioid_otc_not_working",
+
+    "427": "opioid_requests_percocet",
+    "430": "opioid_requests_percocet"
+  }
+}

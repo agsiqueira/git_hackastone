@@ -1,0 +1,153 @@
+.rounded-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-family: 'Lato', 'Roboto', sans-serif;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.rounded-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+@font-face {
+    font-family: 'Aptos';
+    src: url('css/fonts/aptos.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.custom-font {
+    /*font-family: 'Aptos', sans-serif;*/
+    font-family: 'Lato', 'Roboto', sans-serif;
+    font-size: 16px; /* Adjust size as needed */
+    /*font-weight: bold; /* Optional */
+    color: #2a2a2a; /* Ensures the text is black */
+    line-height: 1.75; /* Adjust this value as needed */
+    text-align: justify;
+}
+
+.modal {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0px;
+}
+
+/* Custom styles for modal-body */
+.modal-body {
+    height: auto;        /* Make the height flexible */
+    max-height: 85vh;    /* Limit the height to 80% of the viewport height */
+    overflow-y: auto;    /* Allow scrolling if content overflows */
+}
+
+body {
+    background: none;
+}
+
+img{
+    border: 5px solid rgba(0, 0, 0, 0.16);
+}
+
+.full-page {
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 80%;
+}
+
+.white-font {
+    color: white;
+}
+
+.circle-btn {
+    border: 0;
+    outline: none;
+    /*box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);*/
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+}
+
+.circle-btn-big {
+    width: 100px;
+    height: 100px;
+    font-size: 30px;
+}
+
+.blue {
+    background-color: #007BFF;
+}
+
+.shadow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: inherit;
+}
+
+.shadow-top-z1 {
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+}
+
+.shadow-bottom-z1 {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+.shadow-top-z2 {
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.shadow-bottom-z2 {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+}
+
+.hoverable:hover {
+    cursor: pointer;
+}
+
+a:link,
+a:visited {
+    color: #007BFF; /* Bootstrap blue, looks modern */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3; /* darker on hover */
+    text-decoration: underline;
+}
+
+a:active {
+    color: #004080; /* optional: pressed state. */ 
+}
+
+.custom-font {
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.nav-row {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    margin: 0;
+}
+
+.nav-row.first {
+    justify-content: flex-end;
+}
